@@ -1,0 +1,153 @@
+body{
+  margin: 0;
+  text-align: center;
+  color: #6c6767;
+}
+div#bg{
+position:fixed;
+top:0;
+left:0;
+bottom:0;
+right:0;
+z-index:-1;
+}
+div#bg > img {
+height:100%;
+width:100%;
+border:0;
+}
+
+p.contain>img{
+  float: left;
+  position:fixed;
+  top:40%;
+  margin-top:-100px;
+  left:50%;
+  margin-left:-150px;
+}
+p.contain{
+  float: left;
+  position:fixed;
+  top:50%;
+  left:54%;
+  margin-left:-150px;
+  margin-top:-10px;
+  color: #4b4b4a;
+}
+button{
+  outline: none;
+}
+#touxiang{
+  float:right;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #d4d9dc;
+  border: none;
+}
+button#touxiang>img{
+  width: 20px;
+  height: 20px;
+}
+div>button{
+  border-radius: 25px;
+  border: groove;
+  background: #f3f7f8;
+  color: #716c6c;
+  width: 55px;
+  height: 25px;
+}
+.button{
+  float: left;
+  position:fixed;
+  top:70%;
+  left:52%;
+  margin-left:-175px;
+  margin-top:-10px;
+  padding-left: 10px;
+}
+label>input{
+  border-radius: 25px;
+  width: 270px;
+  outline: none;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 95%;
+  border: 1px solid;
+  height: 20px;
+}
+input:focus{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.submit{
+  background-image: url(search.png);
+  height: 15px;
+  width: 16px;
+  display: inline-block;
+  cursor: pointer;
+  right: 0;
+  margin-left: -10%;
+  border: none;
+   }
+label{
+  float: left;
+  top:60%;
+  left:51%;
+  margin-left:-160px;
+  margin-top:-10px;
+  position:fixed;
+}
+a:link{
+    text-decoration:none;
+    color: red;
+  }
+  span{
+    float: left;
+    padding-left: 25%;
+  }
+    #win>img,button{
+      margin-top:20px;
+
+    }
+    .denglu>input{
+      border-radius: 15px;
+      outline: none;
+      margin-left: -50px;
+    }
+   button{
+     border:1px solid;
+     border-radius: 10px;
+     outline: none;
+     cursor: pointer;
+     margin-left: 10px;
+   }
+   #win{
+     width:400px; height:300px;
+       left:60%; top:50%;
+       margin-left:-300px; margin-top:-200px;
+       border:1px solid #888; background-color:#d4d9dc;
+       position:absolute;
+     }
+     .denglu>input,span{
+       margin-top: 5px;
+     }
+     #back{
+      position:absolute;
+      left:0; top:0;
+      width:100%; height:100%;
+       background-color:rgba(75, 75, 74,0.3);
+     }
+     .close{
+       float: left;
+       margin-left: 350px;
+       margin-top: -230px;
+       border: none;
+       background-color:#d4d9dc;
+       width: 20px;
+       height: 20px;
+     }
+     button#zhuce{
+       text-decoration: underline;
+       border: none;
+       background-color: #d4d9dc;
+     }

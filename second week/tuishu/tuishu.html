@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tuishu</title>
+    <!-- 引用的js -->
+    <!-- 前两个为鼠标移动到头像时变化图像，但是第二个不起作用？？ -->
+    <!-- 后两个是登录窗口弹出 -->
+    <script type="text/javascript">
+    function yonghuming(){
+      document.getElementById('tx').src="用户名.png";
+    }
+    function toux(){
+      document.getElementById('tx').scr="login-icon.png";
+    }
+    function openLogin(){
+       document.getElementById("win").style.display="";
+       document.getElementById("back").style.display="";
+    }
+    function closeLogin(){
+       document.getElementById("win").style.display="none";
+        document.getElementById("back").style.display="none";
+    }
+    </script>
+  </head>
+  <body>
+    <!-- 引用css样式 -->
+    <link rel="stylesheet" href="tuishu.css">
+    <!-- 背景 -->
+   <div id="bg">
+     <img src="bg.png" alt="">
+   </div>
+  <!-- 正中间的logo和文字 -->
+   <p class="contain">
+     <img src="纯logo.png" alt="">
+     <br>The book that know you
+   </p>
+   <!-- 头像，引用js，移动到这里时会产生用户名和头像的切换 -->
+   <!-- 点击头像时弹出登录框 -->
+    <button id="touxiang" >
+       <a href="javascript:openLogin();">
+         <img onmouseover="yonghuming()" onmouseout="toux()" src="login-icon.png" alt="" id="tx">
+       </a>
+    </button>
+    <!-- 分类的按钮 -->
+     <div class="button">
+       <button type="button" name="button">大类1</button>
+       <button type="button" name="button">大类2</button>
+       <button type="button" name="button">大类3</button>
+       <button type="button" name="button">大类4</button>
+     </div>
+     <!-- 用label来包裹搜索框，搜索提交样式背景在css -->
+    <label for="" class="sousuo">
+      <input type="text" placeholder="搜索" name="" value"" id="sousuo" >
+      <button class="submit" ></button>
+    </label>
+    <!-- 登录框的设置 -->
+    <!-- div#back在登陆框弹出式，页面其他无法操作 -->
+    <div id="back" style="display:none; "></div>
+    <!-- div#win为登录框具体内容 -->
+    <div id="win" style="display:none;">
+       <img src="纯logo拷贝2.png" alt="" width="150px" height="100px" >
+       <div class="denglu">
+         <span>账号：<br>密码：</span>
+         <input type="text" name="" value="">
+          <br>
+       <input type="text" name="" value="">
+        <br>
+        <button type="submit" name="button">登录</button>
+        <button type="button" name="button" id="zhuce">注册</button>
+       </div>
+       <br>
+       <!-- 关闭按钮 -->
+       <button type="close" name="button" class="close">
+         <a href="javascript:closeLogin();"><img src="close.png" alt="" ></a>
+       </button>
+     </div>
+
+  </body>
+</html>
