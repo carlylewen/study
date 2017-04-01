@@ -1,0 +1,87 @@
+/*动画小人的样式和动画*/
+div.contain
+{
+margin-top: 10%;
+width:100px;
+height:100px;
+background:none;
+position:relative;
+animation:mymove 5s infinite;
+-webkit-animation:fubiao 5s infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-timing-function:linear;/*Safari and Chrome*/
+}
+/*一般浏览器的格式*/
+@keyframes fubiao
+{
+from {left:20%;}
+to {left:70%;}
+}
+/*Safari and Chrome浏览器格式*/
+@-webkit-keyframes fubiao
+{
+from {left:20%;}
+to {left:70%;}
+}
+/*进度条的样式和动画*/
+div.percent{
+width: 100px;
+height: 30px;
+background: none;
+position:relative;
+border-radius: 25px;
+/*时间为5s，动画执行3次*/
+animation:percent 5s infinite;
+-webkit-animation: percent 5s infinite;
+animation-iteration-count:3;
+-webkit-animation-iteration-count:3; /*Safari and Chrome*/
+-webkit-animation-timing-function:linear;/*Safari and Chrome*/
+}
+@keyframes percent
+{
+0%  {background:rgba(6, 221, 249, 0);width: 0%;}
+25%  {background:rgba(34, 209, 231, 0.5);width: 25%;}
+50%  {background:rgba(92, 200, 214, 0.8);width: 50%;}
+75%  {background:#83bec5;width: 75%; }
+100%  {background:#508b93;width: 100%;}
+}
+
+@-webkit-keyframes percent /*Safari and Chrome*/
+{
+0%  {background:rgba(6, 221, 249, 0);left:0%;}
+25%  {background:rgba(34, 209, 231, 0.5);left: 20%;}
+50%  {background:rgba(92, 200, 214, 0.8);left: 40%;}
+75%  {background:#83bec5;left:60%; }
+100%  {background:#508b93;left: 90%;}
+}
+/*用来包裹进度条的盒子的样式*/
+div.nav{
+margin-top: 1%;
+margin-left: 10%;
+border: 2px solid;
+height: 30px;
+border-radius: 25px;
+width:80%;
+border-color: #afd0d5;
+}
+/*两个百分比的定义*/
+p.left{
+float: left;
+margin-top: -25px;
+margin-left: 5%;
+}
+p.right{
+float: right;
+margin-top: -25px;
+margin-right: 5%;
+}
+/*将动画与推书链接起来*/
+.button{
+ position:relative;
+ margin-left:45%;
+ margin-top: 5%;
+}
+/*链接的样式，取消下划线*/
+a{
+  text-decoration:none;
+}
