@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>tuishu</title>
-    <!-- 引用的js -->
-    <!-- 前两个为鼠标移动到头像时变化图像，但是第二个不起作用？？ -->
-    <!-- 后两个是登录窗口弹出 -->
-    <script type="text/javascript">
-    function yonghuming(){
-      document.getElementById('tx').src="用户名.png";
-    }
-    function toux(){
-      document.getElementById('tx').scr="login-icon.png";
-    }
-    function openLogin(){
-       document.getElementById("win").style.display="";
-       document.getElementById("back").style.display="";
-    }
-    function closeLogin(){
-       document.getElementById("win").style.display="none";
-        document.getElementById("back").style.display="none";
-    }
-    </script>
   </head>
   <body>
     <!-- 引用css样式 -->
@@ -31,7 +13,7 @@
      <img src="bg.png" alt="">
    </div>
   <!-- 正中间的logo和文字 -->
-   <p class="contain">
+   <p id="contain">
      <img src="纯logo.png" alt="">
      <br>The book that know you
    </p>
@@ -39,20 +21,20 @@
    <!-- 点击头像时弹出登录框 -->
     <button id="touxiang" >
        <a href="javascript:openLogin();">
-         <img onmouseover="yonghuming()" onmouseout="toux()" src="login-icon.png" alt="" id="tx">
+         <img  src="login-icon.png" alt="" id="tx">
        </a>
     </button>
     <!-- 分类的按钮 -->
-     <div class="button">
-       <button type="button" name="button">大类1</button>
-       <button type="button" name="button">大类2</button>
-       <button type="button" name="button">大类3</button>
-       <button type="button" name="button">大类4</button>
+     <div class="button" id="button">
+       <button  class="fenlei" type="button" name="button">大类1</button>
+       <button  class="fenlei" type="button" name="button">大类2</button>
+       <button  class="fenlei" type="button" name="button">大类3</button>
+       <button  class="fenlei" type="button" name="button">大类4</button>
      </div>
      <!-- 用label来包裹搜索框，搜索提交样式背景在css -->
-    <label for="" class="sousuo">
-      <input type="text" placeholder="搜索" name="" value"" id="sousuo" >
-      <button class="submit" ></button>
+    <label  for="" class="sousuo" id="sousuo">
+    <input id="text" type="text" value="搜索"  onkeydown="loading()"/>
+      <button class="submit" onclick="loading()" ></button>
     </label>
     <!-- 登录框的设置 -->
     <!-- div#back在登陆框弹出式，页面其他无法操作 -->
@@ -62,19 +44,96 @@
        <img src="纯logo拷贝2.png" alt="" width="150px" height="100px" >
        <div class="denglu">
          <span>账号：<br>密码：</span>
-         <input type="text" name="" value="">
+         <input id="account" type="text" name="" value="用户名">
           <br>
-       <input type="text" name="" value="">
+       <input id="mima" type="text" name="" value="密码">
         <br>
-        <button type="submit" name="button">登录</button>
-        <button type="button" name="button" id="zhuce">注册</button>
+        <button type="submit" name="button" onclick="denglu()" >登录</button>
+        <a href="#">注册</a>
        </div>
-       <br>
+
        <!-- 关闭按钮 -->
        <button type="close" name="button" class="close">
          <a href="javascript:closeLogin();"><img src="close.png" alt="" ></a>
        </button>
      </div>
+     <div id="loading" style="display:none;">
+        <p>loading</p>
+         <img src="灰蒙层 拷贝.png" alt="">
+          <div class="loading1">      </div>
+          <div class="loading2">      </div>
+          <div class="loading3">      </div>
+     </div>
+     <!-- 引用的js -->
+     <!-- 前两个为鼠标移动到头像时变化图像，但是第二个不起作用？？ -->
+     <!-- 后两个是登录窗口弹出 -->
+     <script type="text/javascript">
 
+     function openLogin(){
+        document.getElementById("win").style.display="";
+        document.getElementById("back").style.display="";
+     }
+     function closeLogin(){
+        document.getElementById("win").style.display="none";
+         document.getElementById("back").style.display="none";
+     }
+     var oText=document.getElementById("text");
+     var oText1=document.getElementById("account");
+     var oText2=document.getElementById("mima");
+     var onoff=true;
+     var onoff1=true;
+     var onoff2=true;
+     var x;
+     oText2.onfocus=   function (){
+        if(onoff){
+        this.value="";
+        onoff=false;
+        }
+        }
+     oText1.onfocus=   function (){
+        if(onoff){
+        this.value="";
+        onoff1=false;
+        }
+        }
+     oText.onfocus=   function (){
+        if(onoff){
+        this.value="";
+        onoff2=false;
+        }
+        }
+     oText.onblur=function (){
+     if(this.value==''){
+     this.value="搜索";
+     onoff=true;
+     }
+     }
+     oText1.onblur=function (){
+     if(this.value==''){
+     this.value="用户名";
+     onoff1=true;
+     }
+     }
+     oText2.onblur=function (){
+     if(this.value==''){
+     this.value="密码";
+     onoff2=true;
+     }
+     }
+
+     function loading(){
+        document.getElementById("loading").style.display="";
+        document.getElementById("touxiang").style.display="none";
+        document.getElementById("contain").style.display="none";
+        document.getElementById("win").style.display="none";
+        document.getElementById("back").style.display="none";
+        document.getElementById("sousuo").style.display="none";
+        document.getElementById("button").style.display="none";
+
+     }
+      function denglu(){
+        document.getElementById('tx').src="用户名.png";
+      }
+     </script>
   </body>
 </html>

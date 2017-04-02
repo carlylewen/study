@@ -1,7 +1,7 @@
 body{
   margin: 0;
+  font-family: "Microsoft YaHei ";
   text-align: center;
-  color: #6c6767;
 }
 div#bg{
 position:fixed;
@@ -16,8 +16,10 @@ height:100%;
 width:100%;
 border:0;
 }
-
-p.contain>img{
+input{
+  text-indent: 1em;
+}
+p#contain >img{
   float: left;
   position:fixed;
   top:40%;
@@ -25,7 +27,7 @@ p.contain>img{
   left:50%;
   margin-left:-150px;
 }
-p.contain{
+#contain{
   float: left;
   position:fixed;
   top:50%;
@@ -49,13 +51,19 @@ button#touxiang>img{
   width: 20px;
   height: 20px;
 }
-div>button{
+#button>button{
   border-radius: 25px;
   border: groove;
-  background: #f3f7f8;
+  /*background: #f3f7f8;*/
   color: #716c6c;
   width: 55px;
-  height: 25px;
+  border: 1px solid;
+
+}
+.close>a>img{
+  width: 20px;
+  margin-right: -50px;
+  margin-top: -50px;
 }
 .button{
   float: left;
@@ -64,7 +72,10 @@ div>button{
   left:52%;
   margin-left:-175px;
   margin-top:-10px;
-  padding-left: 10px;
+  padding-left:30px;
+}
+.fenlei:hover{
+  background: #8c8f8f;
 }
 label>input{
   border-radius: 25px;
@@ -73,11 +84,9 @@ label>input{
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: 95%;
-  border: 1px solid;
-  height: 20px;
-}
-input:focus{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px ;
+  height: 25px;
+    box-shadow:-1px -1px 2px #c3c5c7  inset,1px 1px 2px #bec0c2;
 }
 .submit{
   background-image: url(search.png);
@@ -97,38 +106,49 @@ label{
   margin-top:-10px;
   position:fixed;
 }
-a:link{
-    text-decoration:none;
-    color: red;
-  }
+
   span{
     float: left;
     padding-left: 25%;
   }
     #win>img,button{
       margin-top:20px;
-
     }
     .denglu>input{
       border-radius: 15px;
       outline: none;
       margin-left: -50px;
+      text-indent: 1em;
+      border: 1px;
+     box-shadow:-1px -1px 2px #c3c5c7  inset,1px 1px 2px #bec0c2;
+     height: 20px;
+    }
+    .denglu>a{
+      margin-left: 50px;
     }
    button{
      border:1px solid;
-     border-radius: 10px;
+     border-radius: 25px;
      outline: none;
      cursor: pointer;
-     margin-left: 10px;
    }
    #win{
-     width:400px; height:300px;
-       left:60%; top:50%;
-       margin-left:-300px; margin-top:-200px;
-       border:1px solid #888; background-color:#d4d9dc;
+     width:400px;
+      height:300px;
+       left:60%;
+        top:50%;
+       margin-left:-300px;
+       margin-top:-200px;
+       border:2px solid #585654;
+       background-color:#eef2f5;
        position:absolute;
+
      }
-     .denglu>input,span{
+     .denglu{
+       margin: 10px;
+     }
+     .denglu>input,span,a{
+       color: #727479;
        margin-top: 5px;
      }
      #back{
@@ -142,12 +162,117 @@ a:link{
        margin-left: 350px;
        margin-top: -230px;
        border: none;
-       background-color:#d4d9dc;
+       background-color:#eef2f5;
        width: 20px;
        height: 20px;
      }
-     button#zhuce{
+     #win>a{
        text-decoration: underline;
        border: none;
-       background-color: #d4d9dc;
+       background-color: rgba(75,75,74);
      }
+     .denglu>button{
+      box-shadow:-1px -1px 2px #c3c5c7  inset,1px 1px 2px #bec0c2;
+       border: 1px solid #85898e;
+       height: 25px;
+       width: 60px;
+       margin-left: 90px;
+     }
+#loading{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:-1;
+  height:100%;
+  width:100%;
+  border:0;
+  float: left;
+}
+#loading>p{
+  position: absolute;
+  font-size: 36px;;
+  float: left;
+  top:50%;
+  left:54%;
+  margin-left:-150px;
+  margin-top:-10px;
+}
+#loading>div{
+  width: 18px;
+  height:18px;
+  border-radius:100%;
+  position: absolute;
+  float: left;
+  top:50%;
+  left:54%;
+  margin-top:60px;
+  background: #eff3f6;
+}
+.loading1{
+  margin-left: -165px;
+}
+.loading2{
+  margin-left: -90px;
+}
+.loading3{
+  margin-left: -20px;
+}
+div.loading1{
+  animation:loading1 3s 5;
+  -webkit-animation:loading1 3s 5;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-timing-function:linear;/*Safari and Chrome*/
+}
+@keyframes loading1
+{
+0%  {background:#444444;}
+50%  {background:#eff3f6;}
+100%  {background:#eff3f6;}
+}
+
+@-webkit-keyframes loading1 /*Safari and Chrome*/
+{
+0%  {background:#444444;}
+50%  {background:#eff3f6;}
+100%  {background:#eff3f6;}
+}
+div.loading2{
+  animation:loading2 3s 5;
+  -webkit-animation:loading2 3s 5;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-timing-function:linear;/*Safari and Chrome*/
+}
+@keyframes loading2
+{
+0%  {background:#eff3f6;}
+50%  {background:#444444;}
+100%  {background:#eff3f6;}
+}
+
+@-webkit-keyframes loading2 /*Safari and Chrome*/
+{
+0%  {background:#eff3f6;}
+50%  {background:#444444;}
+100%  {background:#eff3f6;}
+}
+div.loading3{
+  animation:loading3 3s 5;
+  -webkit-animation:loading3 3s 5;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-timing-function:linear;/*Safari and Chrome*/
+}
+@keyframes loading3
+{
+0%  {background:#eff3f6;}
+50%  {background:#eff3f6;}
+100%  {background:#444444;}
+}
+
+@-webkit-keyframes loading3 /*Safari and Chrome*/
+{
+0%  {background:#eff3f6;}
+50%  {background:#eff3f6;}
+100%  {background:#444444;}
+}
