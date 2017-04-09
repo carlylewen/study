@@ -33,7 +33,7 @@
      </div>
      <!-- 用label来包裹搜索框，搜索提交样式背景在css -->
     <label  for="" class="sousuo" id="sousuo">
-    <input id="text" type="text" value="搜索"  onkeydown="loading()"/>
+    <input id="text" type="input" value="搜索"  onkeydown="loading()"/>
       <button class="submit" onclick="loading()" ></button>
     </label>
     <!-- 登录框的设置 -->
@@ -44,9 +44,9 @@
        <img src="纯logo拷贝2.png" alt="" width="150px" height="100px" >
        <div class="denglu">
          <span>账号：<br>密码：</span>
-         <input id="account" type="text" name="" value="用户名">
+         <input id="account" type="input" name="" value="用户名">
           <br>
-       <input id="mima" type="text" name="" value="密码">
+       <input id="mima" type="text" name="" value="******">
         <br>
         <button type="submit" name="button" onclick="denglu()" >登录</button>
         <a href="#">注册</a>
@@ -77,49 +77,27 @@
         document.getElementById("win").style.display="none";
          document.getElementById("back").style.display="none";
      }
-     var oText=document.getElementById("text");
-     var oText1=document.getElementById("account");
-     var oText2=document.getElementById("mima");
-     var onoff=true;
-     var onoff1=true;
-     var onoff2=true;
-     oText2.onfocus=   function (){
-        if(onoff){
-        this.value="";
-        onoff=false;
-        }
-        }
-     oText1.onfocus=   function (){
-        if(onoff){
-        this.value="";
-        onoff1=false;
-        }
-        }
-     oText.onfocus=   function (){
-        if(onoff){
-        this.value="";
-        onoff2=false;
-        }
-        }
-     oText.onblur=function (){
-     if(this.value==''){
-     this.value="搜索";
-     onoff=true;
+     window.onload=function(){
+       var oinput =document.getElementsByTagName("input");
+       oinput[0].zhi="搜索";
+       oinput[1].zhi="用户名";
+       oinput[2].zhi="******";
+       for (var i = 0; i < oinput.length; i++) {
+         oinput[i].onoff=true;
+         oinput[i].onfocus=function(){
+           if (this.onoff) {
+             this.value="";
+             this.onoff=false;
+           }
+         }
+         oinput[i].onblur=function(){
+           if (this.value=="") {
+             this.value=this.zhi;
+             this.onoff=true;
+           }
+         }
+       }
      }
-     }
-     oText1.onblur=function (){
-     if(this.value==''){
-     this.value="用户名";
-     onoff1=true;
-     }
-     }
-     oText2.onblur=function (){
-     if(this.value==''){
-     this.value="密码";
-     onoff2=true;
-     }
-     }
-
      function loading(){
         document.getElementById("loading").style.display="";
         document.getElementById("touxiang").style.display="none";
