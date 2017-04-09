@@ -1,0 +1,57 @@
+body{
+  margin: 0;
+  font-family: "Microsoft YaHei ";
+
+}
+input{
+    text-indent: 1em;
+}
+button{
+  outline: none;
+}
+.header{
+  width: 100%;
+  min-width: 600px;
+  height: 50px;
+  background-color: white;
+}
+.header>img{
+  margin: 10px;
+  margin-left: 20%;
+}
+.sousuo>input{
+  border-radius: 25px;
+  width: 200px;
+  outline: none;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 95%;
+  border: 1px ;
+  height: 20px;
+  box-shadow:-1px -1px 2px #c3c5c7  inset,1px 1px 2px #bec0c2;
+}
+label>button{
+  height: 15px;
+  width: 16px;
+  display: inline-block;
+  cursor: pointer;
+  right: 0;
+  margin-left: -15%;
+  margin-top: -10%;
+  border: none;
+  background: white;
+  position:relative;
+   }
+button>img{
+  width: 15px;
+  height: 15px;
+  margin: -2px;
+}
+label{
+     float: left;
+     top:4%;
+     left:80%;
+     margin-left:-160px;
+     margin-top:-10px;
+     position:fixed;
+   }
