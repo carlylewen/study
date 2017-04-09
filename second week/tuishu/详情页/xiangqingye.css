@@ -1,0 +1,116 @@
+body{
+  margin: 0;
+  font-family: "Microsoft YaHei ";
+  text-align: center;
+  height: 1400px;
+}
+div.bg{
+position:fixed;
+top:0;
+left:0;
+bottom:0;
+right:0;
+z-index:-1;
+height: 1400px;
+}
+div.bg>img {
+height: 1400px;
+width:100%;
+border:0;
+}
+#contain{
+  float: left;
+
+  margin-left:15%;
+  margin-top:150px;
+  background-color: white;
+  height: 1200px;
+  width: 900px;
+}
+.you{
+  margin-top: 100px;
+  margin-left: -600px;
+}
+.zuo{
+  margin-left: 670px;
+  margin-top: 130px;
+}
+a.shu{
+  margin-left: -400px;
+  margin-top: -50px;
+  float:initial;
+}
+.close{
+  float: right;
+}
+#text>h1{
+  margin-left: 200px;
+  margin-top: -335px;
+}
+#text>ul{
+  width: 20px;
+  margin-left: 400px;
+}
+ul>a{
+  width: 20px;
+  height: 40px;
+
+  position: relative;
+  line-height: 30px;
+
+}
+.ul1{
+  margin-top: -10px;
+
+}
+.ul2{
+  margin-top: 23px;
+}
+.ul3{
+  margin-top: 70px;
+  line-height: 40px;
+}
+p{
+  text-align: left;
+   margin-left: 470px;
+
+}
+span{
+   padding-left: 10px;
+  border-left: 1px solid;
+}
+.p1{
+
+  margin-top: -312px;
+   line-height: 30px;
+
+}
+
+.p2{
+
+    margin-top: 22px;
+
+     line-height: 30px;
+
+}
+.location{
+  position: relative;
+  margin-left: 575px;
+  margin-top: -40px;
+}
+.p3{
+  margin-top: 50px;
+}
+span>img{
+  padding: 1px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.introduction{
+  margin-left: -575px;
+}
+.introduction>p{
+  width: 600px;
+  text-indent: 2em;
+  margin-left: 690px;
+}
