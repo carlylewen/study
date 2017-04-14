@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>搜索页</title>
+  </head>
+  <body>
+  <link rel="stylesheet" href="fenlei.css">
+    <div class="header">
+      <img src="上导航2.png" alt="" class="bgheader">
+      <img src="small-logo.png" alt="" class="logo">
+      <label  for="" class="sousuo">
+      <input  type="text" value="请搜索"  onkeydown="loading()"/>
+        <button class="submit" onclick="loading()" ><img src="../../tuishu\主页\search.png" alt=""></button>
+
+      </label>
+    <!-- <button type="button" name="button" class="fenlei">分类</button> -->
+    </div>
+    <div id="pic">
+       <img src="banner-1.png" alt="">
+       <p><strong>震惊！小卖部要关了</strong></p>
+       <ul>
+
+       </ul>
+    </div>
+    <p id="lei">
+      分类：
+       <button type="button" name="button"><a href="#">类1</a></button>
+       <button type="button" name="button"><a href="#">类2</a></button>
+       <button type="button" name="button"><a href="#">类3</a></button>
+       <button type="button" name="button"><a href="#">类4</a></button>
+       <br>
+       <img src="线.png" alt="">
+    </p>
+     <div class="shu">
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+     <button type="button" name="button">
+        <a href="#">
+       <img src="cover.png" alt="">
+       <br>
+       <img src="start4.png" alt="">
+       <br>
+         <span>书名
+         <br>作者
+         </span>
+       </a>
+     </button>
+
+     </div>
+     <div id="ye">
+       <img src="左.png" alt="">
+       <label for="" id="yeshu">
+         <button type="button" name="button" class="jump"><a  href="#">1</a></button>
+        <button type="button" name="button"> <a href="#">2</a></button>
+        <button type="button" name="button"> <a href="#">3</a></button>
+       </label>
+        <img src="右.png" alt="" class="you">
+        <p>共X页</p>
+     </div>
+
+    <script type="text/javascript">
+    window.onload=function(){
+      var oinput =document.getElementsByTagName("input");
+      oinput[0].zhi="请搜索";
+      for (var i = 0; i < oinput.length; i++) {
+        oinput[i].onoff=true;
+        oinput[i].onfocus=function(){
+          if (this.onoff) {
+            this.value="";
+            this.onoff=false;
+          }
+        }
+        oinput[i].onblur=function(){
+          if (this.value=="") {
+            this.value=this.zhi;
+            this.onoff=true;
+          }
+        }
+      }
+    }
+    var oDiv=document.getElementById("pic");
+    var oImg=oDiv.getElementsByTagName('img')[0];
+    var oUl=oDiv.getElementsByTagName('ul')[0];
+    var aLi=oUl.getElementsByTagName('li');
+      var op=oDiv.getElementsByTagName('p');
+    var num=0;
+    var arrUrl=['banner-1.png','banner-2(轮播2).png','banner-3.png'];
+    oImg.src=arrUrl[num];
+    for (var i = 0; i < arrUrl.length; i++) {
+      oUl.innerHTML+='<li></li>';
+    }
+    aLi[num].className='active';
+    for (var i = 0; i < aLi.length; i++) {
+      aLi[i].index=i;
+      aLi[i].onclick=function(){
+          oImg.src=arrUrl[this.index];
+        // if (this.index==2) {
+        //   alert(op);
+        //   op.style.display=' ';
+        // }
+
+        for (var i = 0; i < aLi.length; i++) {
+          aLi[i].className="";
+
+        }
+          this.className='active';
+
+
+      }
+    }
+    var oP=document.getElementById('lei');
+    var oA=oP.getElementsByTagName('a');
+    var a=0;
+   var oSpan=oP.getElementsByTagName('span')
+    oA[a].className='click';
+    for (var i = 0; i < oA.length; i++) {
+      oA[i].index=i;
+      oA[i].onclick=function(){
+        for (var i = 0; i < oA.length; i++) {
+          oA[i].className=" ";
+
+
+        }
+          this.className='click';
+      }
+    }
+    var oLabel=document.getElementById('yeshu');
+    var oA1=oLabel.getElementsByTagName('button');
+    var b=0;
+    oA1[b].className='jump';
+    oA1[b].style.background='black';
+    for (var i = 0; i < oA1.length; i++) {
+      oA1[i].index=i;
+      oA1[i].onclick=function(){
+        for (var i = 0; i < oA1.length; i++) {
+          oA1[i].className=" ";
+          oA1[i].style.background='white';
+
+        }
+          this.className='jump';
+          this.style.background='black';
+      }
+    }
+
+
+    // var oShu=document.getElementsByClassName('shu');
+    // var oB=oShu.getElementsByTagName('button');
+    // for (var i = 0; i <8; i++) {
+    //   oShu.innerHTML+='oB';
+    // }
+    </script>
+  </body>
+</html>
