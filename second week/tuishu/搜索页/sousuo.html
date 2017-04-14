@@ -7,27 +7,44 @@
   <body>
   <link rel="stylesheet" href="sousuo.css">
     <div class="header">
-      <img src="small-logo.png" alt="">
+      <img src="上导航2.png" alt="" class="bgheader">
+      <img src="small-logo.png" alt="" class="logo">
       <label  for="" class="sousuo">
-      <input id="text"  type="text" value="请搜索"  onkeydown="loading()"/>
+      <input  type="text" value="请搜索"  onkeydown="loading()"/>
         <button class="submit" onclick="loading()" ><img src="../../tuishu\主页\search.png" alt=""></button>
+
       </label>
+    <button type="button" name="button" class="fenlei">分类</button>
     </div>
+    <div class="bg2">
+      <img src="bg2.png" alt="">
+    <p>
+       <span>搜索的东西</span>
+    </p>
+    </div>
+     <div class="shu">
+       
+     </div>
     <script type="text/javascript">
-     var oText=document.getElementById("text");
-     var onoff=true;
-     oText.onfocus=function (){
-        if(onoff){
-        this.value="";
-        onoff2=false;
+    window.onload=function(){
+      var oinput =document.getElementsByTagName("input");
+      oinput[0].zhi="请搜索";
+      for (var i = 0; i < oinput.length; i++) {
+        oinput[i].onoff=true;
+        oinput[i].onfocus=function(){
+          if (this.onoff) {
+            this.value="";
+            this.onoff=false;
+          }
         }
+        oinput[i].onblur=function(){
+          if (this.value=="") {
+            this.value=this.zhi;
+            this.onoff=true;
+          }
         }
-        oText.onblur=function (){
-        if(this.value==''){
-        this.value="请搜索";
-        onoff=true;
-        }
-        }
+      }
+    }
     </script>
   </body>
 </html>

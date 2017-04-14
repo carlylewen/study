@@ -1,6 +1,7 @@
 body{
   margin: 0;
   font-family: "Microsoft YaHei ";
+  background-image: url("bg3.png");
 
 }
 input{
@@ -13,12 +14,26 @@ button{
   width: 100%;
   min-width: 600px;
   height: 50px;
-  background-color: white;
+  background-image: url(上导航2.png);
+
 }
-.header>img{
+
+.bgheader{
+  float: left;
+  margin: 0;
+  margin-left: 0;
+}
+.logo{
+  float: left;
+  margin-top: -50px;
+  margin-left: 15%;
+  position: relative;
+
+}
+/*.header>img{
   margin: 10px;
-  margin-left: 20%;
-}
+  margin-left: 15%;
+}*/
 .sousuo>input{
   border-radius: 25px;
   width: 200px;
@@ -42,6 +57,20 @@ label>button{
   background: white;
   position:relative;
    }
+.fenlei{
+  background: #dcd79d;
+  width: 90px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+  right: 0;
+  margin-right:15%;
+  margin-top:10px;
+  float: left;;
+  border: none;
+  position: absolute;
+
+}
 button>img{
   width: 15px;
   height: 15px;
@@ -51,7 +80,27 @@ label{
      float: left;
      top:4%;
      left:80%;
-     margin-left:-160px;
-     margin-top:-10px;
-     position:fixed;
+     margin-left:-40%;
+     margin-top:-50px;
+     position:relative;
    }
+.bg2>p{
+  width: 170px;
+  height: 40px;
+  background-color: #e3dfb4;
+  text-align: center;
+  line-height: 40px;
+  float: left;
+  top:4%;
+  left:80%;
+  margin-left:-37%;
+  margin-top:-120px;
+  position:relative;;
+}
+.shu{
+  background-image: url("白底 拷贝.png");
+  float: left;
+  width: 80%;
+  height: 800px;
+  margin-left: 10%
+}
