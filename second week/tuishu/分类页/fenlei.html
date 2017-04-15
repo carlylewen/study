@@ -2,20 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>搜索页</title>
+    <title>分类页</title>
   </head>
   <body>
   <link rel="stylesheet" href="fenlei.css">
+  <!-- 第一部分顶部的内容 -->
     <div class="header">
       <img src="上导航2.png" alt="" class="bgheader">
       <img src="small-logo.png" alt="" class="logo">
       <label  for="" class="sousuo">
-      <input  type="text" value="请搜索"  onkeydown="loading()"/>
-        <button class="submit" onclick="loading()" ><img src="../../tuishu\主页\search.png" alt=""></button>
+        <!-- 调用js函数，搜索框的聚焦失焦以及搜索按钮链接到详情页 -->
+      <input  type="text" value="请搜索" />
+        <button class="submit" ><a href="../../tuishu\详情页\xiangqingye.html"><img src="../../tuishu\主页\search.png" alt=""></a></button>
 
       </label>
     <!-- <button type="button" name="button" class="fenlei">分类</button> -->
     </div>
+    <!-- 轮播图，具体由js进行 -->
     <div id="pic">
        <img src="banner-1.png" alt="">
        <p><strong>震惊！小卖部要关了</strong></p>
@@ -23,6 +26,7 @@
 
        </ul>
     </div>
+    <!-- 轮播图下方的分类，具体功能见js -->.0
     <p id="lei">
       分类：
        <button type="button" name="button"><a href="#">类1</a></button>
@@ -32,6 +36,7 @@
        <br>
        <img src="线.png" alt="">
     </p>
+    <!-- 八本书的布置 -->
      <div class="shu">
      <button type="button" name="button">
         <a href="#">
@@ -124,6 +129,7 @@
 
      </div>
      <div id="ye">
+       <!-- 分页设置 -->
        <img src="左.png" alt="">
        <label for="" id="yeshu">
          <button type="button" name="button" class="jump"><a  href="#">1</a></button>
@@ -133,8 +139,9 @@
         <img src="右.png" alt="" class="you">
         <p>共X页</p>
      </div>
-
+<!-- js -->
     <script type="text/javascript">
+    // 搜索框鼠标点击，文字消失，失焦文字出现
     window.onload=function(){
       var oinput =document.getElementsByTagName("input");
       oinput[0].zhi="请搜索";
@@ -154,18 +161,24 @@
         }
       }
     }
+    // 轮播图搜的设置
     var oDiv=document.getElementById("pic");
     var oImg=oDiv.getElementsByTagName('img')[0];
     var oUl=oDiv.getElementsByTagName('ul')[0];
     var aLi=oUl.getElementsByTagName('li');
       var op=oDiv.getElementsByTagName('p');
     var num=0;
+    // 定义定时器为null
     var timer=null;
+    // 将图片放在数组中
     var arrUrl=['banner-1.png','banner-2(轮播2).png','banner-3.png'];
+    // 根据数组长度决定li的个数
     for (var i = 0; i < arrUrl.length; i++) {
       oUl.innerHTML+='<li></li>';
     }
+    // 将第一个li赋予特定样式
     aLi[num].className='active';
+    // 定义函数执行轮播
   function fnTab(){
     oImg.src=arrUrl[num];
 
@@ -176,7 +189,7 @@
           aLi[num].className='active';
       }
 
-      // aLi[num].className='active';
+      // 当点击li时可以切换图片
       for (var i = 0; i < aLi.length; i++) {
         aLi[i].index=i;
         aLi[i].onclick=function(){
@@ -189,8 +202,9 @@
           }
     }
 
-
+// 调用函数
  fnTab();
+ // 设置定时器函数，每2秒轮播一次
     function autoPlay(){
       timer=setInterval(function(){
         num++;
@@ -199,11 +213,16 @@
         // alert(arrUrl.length);
      },2000);
     }
+    // 调用定时器函数
       autoPlay();
+      // 当鼠标移入div时，停止定时器
     oDiv.onmouseover=function(){
       clearInterval(timer);
     };
+    // 鼠标移出时开始自动轮播
    oDiv.onmouseout=autoPlay;
+
+  //  分类按钮，点击变换颜色
     var oP=document.getElementById('lei');
     var oA=oP.getElementsByTagName('a');
     var a=0;
@@ -220,6 +239,7 @@
           this.className='click';
       }
     }
+    // 最底下的页数点击变化样式
     var oLabel=document.getElementById('yeshu');
     var oA1=oLabel.getElementsByTagName('button');
     var b=0;
