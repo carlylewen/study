@@ -160,30 +160,50 @@
     var aLi=oUl.getElementsByTagName('li');
       var op=oDiv.getElementsByTagName('p');
     var num=0;
+    var timer=null;
     var arrUrl=['banner-1.png','banner-2(轮播2).png','banner-3.png'];
-    oImg.src=arrUrl[num];
     for (var i = 0; i < arrUrl.length; i++) {
       oUl.innerHTML+='<li></li>';
     }
     aLi[num].className='active';
-    for (var i = 0; i < aLi.length; i++) {
-      aLi[i].index=i;
-      aLi[i].onclick=function(){
-          oImg.src=arrUrl[this.index];
-        // if (this.index==2) {
-        //   alert(op);
-        //   op.style.display=' ';
-        // }
+  function fnTab(){
+    oImg.src=arrUrl[num];
 
         for (var i = 0; i < aLi.length; i++) {
           aLi[i].className="";
 
         }
-          this.className='active';
-
-
+          aLi[num].className='active';
       }
+
+      // aLi[num].className='active';
+      for (var i = 0; i < aLi.length; i++) {
+        aLi[i].index=i;
+        aLi[i].onclick=function(){
+            oImg.src=arrUrl[this.index];
+            for (var i = 0; i < aLi.length; i++) {
+              aLi[i].className="";
+
+            }
+              this.className='active';
+          }
     }
+
+
+ fnTab();
+    function autoPlay(){
+      timer=setInterval(function(){
+        num++;
+        num%=arrUrl.length;
+        fnTab();
+        // alert(arrUrl.length);
+     },2000);
+    }
+      autoPlay();
+    oDiv.onmouseover=function(){
+      clearInterval(timer);
+    };
+   oDiv.onmouseout=autoPlay;
     var oP=document.getElementById('lei');
     var oA=oP.getElementsByTagName('a');
     var a=0;
