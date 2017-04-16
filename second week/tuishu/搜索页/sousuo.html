@@ -10,11 +10,22 @@
       <img src="上导航2.png" alt="" class="bgheader">
       <img src="small-logo.png" alt="" class="logo">
       <label  for="" class="sousuo">
-      <input  type="text" value="请搜索"  onkeydown="loading()"/>
-        <button class="submit" onclick="loading()" ><img src="../../tuishu\主页\search.png" alt=""></button>
+      <input  type="text" value="请搜索" />
+        <button class="submit"  ><img src="../../tuishu\主页\search.png" alt=""></button>
 
       </label>
-    <button type="button" name="button" class="fenlei">分类</button>
+     <div id="list">
+       <button type="button" name="button">分类</button>
+     </div>
+     <div id="title">
+       <a href="#">分类1</a>
+       <br>
+      <a href="#">分类2</a>
+      <br>
+       <a href="#">分类3</a>
+       <br>
+      <a href="#">分类4</a>
+     </div>
     </div>
     <div class="bg2">
       <img src="bg2.png" alt="">
@@ -22,10 +33,195 @@
        <span>搜索的东西</span>
     </p>
     </div>
-     <div class="shu">
-       
+
+    <div id="shu">
+    <button type="button" name="button">
+       <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+
+        <span>书名<br> 作者
+      </span>
+
+
+      </a>
+    </button>
+    <button type="button" name="button">
+ <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+        <span>书名
+        <br>作者
+        </span>
+      </a>
+    </button>
+    <button type="button" name="button">
+ <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+        <span>书名
+        <br>作者
+        </span>
+      </a>
+    </button>
+    <button type="button" name="button">
+ <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+        <span>书名
+        <br>作者
+        </span>
+      </a>
+    </button>
+    <br>
+    <button type="button" name="button">
+ <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+        <span>书名
+        <br>作者
+        </span>
+      </a>
+    </button>
+    <button type="button" name="button">
+ <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+        <span>书名
+        <br>作者
+        </span>
+      </a>
+    </button>
+    <button type="button" name="button">
+ <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+        <span>书名
+        <br>作者
+        </span>
+      </a>
+    </button>
+    <button type="button" name="button">
+ <a href="#">
+      <img src="cover.png" alt="">
+      <br>
+      <img src="start4.png" alt="">
+      <br>
+        <span>书名
+        <br>作者
+        </span>
+      </a>
+    </button>
+
+    </div>
+    <div id="ye">
+      <!-- 分页设置 -->
+      <img src="左.png" alt="">
+      <label for="" id="yeshu">
+        <button type="button" name="button" class="jump"><a  href="#">1</a></button>
+       <button type="button" name="button"> <a href="#">2</a></button>
+       <button type="button" name="button"> <a href="#">3</a></button>
+      </label>
+       <img src="右.png" alt="" class="you">
+       <p>共X页</p>
+    </div>
+    <br>
+    <div id="all">
+   <div class="bg">
+     <img src="../../tuishu\主页\灰蒙层 拷贝.png" alt="">
+   </div>
+   <!-- <link rel="stylesheet" href="xiangqingye.css"> -->
+   <!-- 用一个大的div包含整个内容 -->
+   <div id="contain">
+     <!-- 关闭详情页的链接，并跳转到分类页面 -->
+     <button type="button" name="button" id="guanbi">
+       <a href="#" class="close">
+       <img src="close.png" alt="" ></a></button>
+   <!-- 左右的横线（与下面的class=“zuo”相同） -->
+   <img src="组 2.png" alt="" class="you1">
+   <br>
+  <!-- 书的图片 -->
+  <a href="#" class="shu"><img src="bookcover.png" alt="" ></a>
+   <br>
+   <!-- 一个div包裹剩下的文字内容 -->
+   <div id="text">
+     <h1>书名</h1>
+     <!-- 用列表将小图标包裹及定位 -->
+     <ul class="ul1">
+     <a href="#"><img src="作者 .png" alt=""></a>
+     <br>
+     <a href="#">  <img src="出.png" alt="" ></a>
+     </ul>
+     <ul class="ul2">
+       <a href="#">  <img src="时间.png" alt="" ></a>
+       <br>
+       <a href="#">  <img src="图书馆.png" alt="" ></a>
+     </ul>
+     <ul class="ul3">
+       <a href="#">  <img src="书 (1).png" alt="" ></a>
+       <br>
+       <a href="#">  <img src="购买.png" alt="" ></a>
+     </ul>
+     <!-- p包裹文字内容，用span进行css设置 -->
+     <p class="p1">
+     <span> 作者</span>
+       <br>
+       <span>出版社</span>
+     </p>
+     <p class="p2">
+     <span>出版时间</span>
+       <br>
+       <span>
+         图书馆藏书:
+         <p class="location">X本
+           <br>
+           X楼X架XX</p></span>
+     </p>
+     <p class="p3">
+    <span>
+      <img src="豆瓣.png" alt="">
+      <img src="知乎.png" alt="">
+    </span>
+    <br>
+    <span>
+      <img src="京东.png" alt="">
+      <img src="当当.png" alt="">
+      <img src="亚马逊.png" alt="">
+    </span>
+     </p>
+   </div>
+   <br>
+   <!-- 作者简介等 -->
+   <div class="introduction">
+     <h2>作者简介</h2>
+     <p class="zuozhe">从前有座山，山里有座庙。从前有座山，山里有座庙。
+       从前有座山，山里有座庙。从前有座山，山里有座庙。从前有座山，山里有座庙。
+       从前有座山，山里有座庙。</p>
+       <br>
+     <h2>书籍简介</h2>
+     <p class="shuji">从前有座山，山里有座庙。从前有座山，山里有座庙。从前有座山，山里有座庙。从前有座山，山里有座庙。
+     从前有座山，山里有座庙。从前有座山，山里有座庙。从前有座山，山里有座庙。从前有座山，山里有座庙。</p>
+   </div>
+
+   <br>
+   <img src="组 1.png" alt="" class="zuo1">
      </div>
-    <script type="text/javascript">
+ </div>
+   <script type="text/javascript">
     window.onload=function(){
       var oinput =document.getElementsByTagName("input");
       oinput[0].zhi="请搜索";
@@ -44,7 +240,79 @@
           }
         }
       }
+      // var oUl=document.getElementById('list');
+      // var oLi=oUl.getElementsByTagName('li');
+      // for (var i = 0; i < oUl.length; i++) {
+      //   oUl[i].index=i;
+      //   oUl[i].onclick=function(){
+      //     oLi[this.index].style.display='block';
+      //   };
+      // }
+      var oLabel=document.getElementById('yeshu');
+      var oA1=oLabel.getElementsByTagName('button');
+      var b=0;
+      oA1[b].className='jump';
+      oA1[b].style.background='black';
+      for (var i = 0; i < oA1.length; i++) {
+        oA1[i].index=i;
+        oA1[i].onclick=function(){
+          for (var i = 0; i < oA1.length; i++) {
+            oA1[i].className=" ";
+            oA1[i].style.background='white';
+
+          }
+            this.className='jump';
+            this.style.background='black';
+        }
+      }
+
     }
+    // window.ready=function(){
+      var list=document.getElementById('list');
+      var title=document.getElementById('title');
+      var timer=null;
+
+      function show(){
+        clearInterval(timer);
+        title.style.display='block';
+
+      }
+      function hide(){
+        timer=setTimeout(function(){
+          title.style.display='none';
+        },200);
+      }
+      list.onmouseover=show;
+      list.onmouseout=hide;
+     title.onmouseover=show;
+      title.onmouseout=hide;
+      var shu=document.getElementById('shu');
+      var oBtn=shu.getElementsByTagName('button');
+      var all=document.getElementById('all');
+      var guanbi=document.getElementById('guanbi');
+      var timer1=null;
+      var timer2=null;
+    for (var i = 0; i < oBtn.length; i++) {
+    oBtn[i].onclick=show1;
+
+      function show1(){
+        clearInterval(timer1);
+        timer2=setTimeout(function(){
+    all.style.display='block';
+        },500);
+        // all.style.display='block';
+
+      }
+      function hide1(){
+          clearInterval(timer2);
+        timer1=setTimeout(function(){
+        all.style.display='none';
+        },200);
+      }
+      }
+      oBtn.onclick=show1;
+
+      guanbi.onclick=hide1;
     </script>
   </body>
 </html>

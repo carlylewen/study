@@ -20,20 +20,22 @@
    <!-- 头像，引用js，移动到这里时会产生用户名和头像的切换 -->
    <!-- 点击头像时弹出登录框 -->
     <button id="touxiang" >
-       <a href="javascript:openLogin();">
+       <a href="javascript:openLogin();" >
+
          <img  src="login-icon.png" alt="" id="tx">
+
        </a>
     </button>
     <!-- 分类的按钮 -->
      <div class="button" id="button">
-       <button  class="fenlei" type="button" name="button">大类1</button>
+       <button  class="fenlei" type="button" name="button"><a href="../../tuishu\分类页\fenlei.html">大类1</a></button>
        <button  class="fenlei" type="button" name="button">大类2</button>
        <button  class="fenlei" type="button" name="button">大类3</button>
        <button  class="fenlei" type="button" name="button">大类4</button>
      </div>
      <!-- 用label来包裹搜索框，搜索提交样式背景在css -->
     <label  for="" class="sousuo" id="sousuo">
-    <input id="text" type="input" value="搜索"  onkeydown="loading()"/>
+    <input id="text" type="input" value="搜索" />
       <button class="submit" onclick="loading()" ></button>
     </label>
     <!-- 登录框的设置 -->
@@ -44,9 +46,9 @@
        <img src="纯logo拷贝2.png" alt="" width="150px" height="100px" >
        <div class="denglu">
          <span>账号：<br>密码：</span>
-         <input id="account" type="input" name="" value="用户名">
+         <input id="account" type="name" name="" value="用户名">
           <br>
-       <input id="mima" type="text" name="" value="******">
+       <input id="mima" type="text" name="password" value="******">
         <br>
         <button type="submit" name="button" onclick="denglu()" >登录</button>
         <a href="#">注册</a>
@@ -67,9 +69,23 @@
      <!-- 引用的js -->
      <!-- 前两个为鼠标移动到头像时变化图像，但是第二个不起作用？？ -->
      <!-- 后两个是登录窗口弹出 -->
+     <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+     <script src="http://mockjs.com/dist/mock.js"></script>
      <script type="text/javascript">
-
+     Mock.mock('http://vtmer.cn/login', {
+         'user|9':[{
+               name:'@first()',
+               password:'@string(lower+number,6,10)'
+              }]
+         });
      function openLogin(){
+       $.ajax({
+       url: 'http://vtmer.cn/login',
+       }).done(function(data, status, xhr){
+       console.log(
+           JSON.stringify(data, null, 4)
+       )
+       })
         document.getElementById("win").style.display="";
         document.getElementById("back").style.display="";
      }
@@ -77,11 +93,15 @@
         document.getElementById("win").style.display="none";
          document.getElementById("back").style.display="none";
      }
+     var oinput =document.getElementsByTagName("input");
+     oinput[0].zhi="搜索";
+     oinput[1].zhi="用户名";
+     oinput[2].zhi="******";
      window.onload=function(){
-       var oinput =document.getElementsByTagName("input");
-       oinput[0].zhi="搜索";
-       oinput[1].zhi="用户名";
-       oinput[2].zhi="******";
+      //  var oinput =document.getElementsByTagName("input");
+      //  oinput[0].zhi="搜索";
+      //  oinput[1].zhi="用户名";
+      //  oinput[2].zhi="******";
        for (var i = 0; i < oinput.length; i++) {
          oinput[i].onoff=true;
          oinput[i].onfocus=function(){
@@ -97,6 +117,7 @@
            }
          }
        }
+
      }
      function loading(){
         document.getElementById("loading").style.display="";
@@ -107,8 +128,11 @@
         document.getElementById("sousuo").style.display="none";
         document.getElementById("button").style.display="none";
       setInterval(close,2000);
+
+
      }
      function close(){
+       clearInterval(setInterval(close,2000));
         document.getElementById("loading").style.display="none";
         document.getElementById("touxiang").style.display="";
         document.getElementById("contain").style.display="";
@@ -116,11 +140,30 @@
         document.getElementById("back").style.display="none";
         document.getElementById("sousuo").style.display="";
         document.getElementById("button").style.display="";
+     }
+     function denglu(){
+
+       document.getElementById('tx').style.display='none';
+       document.getElementById('touxiang').innerHTML=oinput[1].value;
+       loading();
 
      }
-      function denglu(){
-        document.getElementById('tx').src="用户名.png";
-      }
+      // function denglu(){
+      //   document.getElementById('tx').style.display='none';
+      //   document.getElementById('tx').innerHTML=oinput[1].value;
+      //   loading();
+      // }
+
+
+        // $("#mockjs").click(function(){
+        // $.ajax({
+        // url: 'http://vtmer.cn/login',
+        // }).done(function(data, status, xhr){
+        // console.log(
+        //     JSON.stringify(data, null, 4)
+        // )
+        // })
+        // });
      </script>
   </body>
 </html>

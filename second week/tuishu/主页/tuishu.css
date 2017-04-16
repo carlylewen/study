@@ -47,6 +47,7 @@ button{
   background-color: #d4d9dc;
   border: none;
 }
+
 button#touxiang>img{
   width: 20px;
   height: 20px;
@@ -59,6 +60,9 @@ button#touxiang>img{
   width: 55px;
   border: 1px solid;
 
+}
+#button>button>a{
+  text-decoration: none;
 }
 .close>a>img{
   width: 20px;

@@ -2,7 +2,7 @@ body{
   margin: 0;
   font-family: "Microsoft YaHei ";
   background-image: url("bg3.png");
-
+  height: 1300px;
 }
 input{
     text-indent: 1em;
@@ -14,7 +14,7 @@ button{
   width: 100%;
   min-width: 600px;
   height: 50px;
-  background-image: url(上导航2.png);
+
 
 }
 
@@ -22,6 +22,7 @@ button{
   float: left;
   margin: 0;
   margin-left: 0;
+  width: 100%;
 }
 .logo{
   float: left;
@@ -34,6 +35,9 @@ button{
   margin: 10px;
   margin-left: 15%;
 }*/
+.bg2>img{
+  width: 100%;
+}
 .sousuo>input{
   border-radius: 25px;
   width: 200px;
@@ -57,7 +61,7 @@ label>button{
   background: white;
   position:relative;
    }
-.fenlei{
+#list{
   background: #dcd79d;
   width: 90px;
   height: 30px;
@@ -69,7 +73,39 @@ label>button{
   float: left;;
   border: none;
   position: absolute;
+  text-align: center;
+  line-height: 25px;
+  list-style: none;
 
+}
+#list>button{
+  border: none;
+  background-color:  #dcd79d;
+  text-align: center;
+  /*line-height: 30px;*/
+  /*list-style: none;*/
+}
+#title{
+  background: #dcd79d;
+  width: 90px;
+  height: 130px;
+  border-radius: 15%;
+  list-style: none;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  margin-right:15%;
+  margin-top:40px;
+  float: left;;
+  padding-top: 10px;
+  line-height: 30px;
+
+  display: none;
+}
+#title>a{
+  color:black;
+  margin-left: 25%;
+  margin-top: 10px;
 }
 button>img{
   width: 15px;
@@ -97,10 +133,210 @@ label{
   margin-top:-120px;
   position:relative;;
 }
-.shu{
+.bg2>p>span{
+  border: none;
+}
+#shu{
   background-image: url("白底 拷贝.png");
   float: left;
   width: 80%;
-  height: 800px;
+  height: 1000px;
   margin-left: 10%
+}
+#shu>button{
+   width: 200px;
+   height: 400px;
+   border: none;
+   background-color: inherit;
+   margin: 30px 10px 0px 30px;
+
+}
+#shu>button>a>span{
+  border: none;
+  padding: 0;
+}
+#shu>button>a{
+  text-decoration: none;
+}
+.jump{
+  background: black;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+
+}
+#yeshu>button{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border:none;
+  margin-left: 10px;
+  margin-top: -5px;
+  background: white;
+}
+
+.jump>a{
+  color: white;
+}
+#yeshu>button>a{
+  text-decoration: none;
+}
+#yeshu{
+  width: 120px;
+  height: 25px;
+  margin-top: -3px;
+  position: relative;
+  margin-left: -100px;
+}
+.you{
+  margin-left: 125px;
+}
+#ye{
+  float: left;
+  margin-left: 43%;
+  margin-bottom: 10px;
+  margin-top: -60px;
+}
+#ye>p{
+  margin-left: 80px;
+  position: relative;
+}
+#all{
+  float: left;
+  display: none;
+  height: 350px;
+  margin-top: -80px;
+}
+div.bg{
+/*position:fixed;
+top:0;
+left:0;
+bottom:0;
+right:0;
+z-index:-1;
+height: 1000px;*/
+}
+div.bg>img {
+margin-top: -945px;
+height: 1200px;
+width:100%;
+border:0;
+}
+#contain{
+  position: absolute;
+  float: left;
+  margin-left:15%;
+  margin-top:-1100px;
+  background-color: white;
+  height: 1000px;
+  width: 900px;
+}
+.you1{
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.zuo1{
+  margin-left: 750px;
+  margin-top: 100px;
+}
+a.shu{
+  margin-left: 100px;
+  margin-top: -50px;
+  float:initial;
+}
+#guanbi{
+  float: right;
+  border: none;
+  background: inherit;
+  padding: 0;
+}
+#guanbi>img{
+
+}
+#text{
+  margin-top: 200px;
+  float: left;
+  position: relative;
+}
+#text>h1{
+  margin-left: 505px;
+  margin-top: -580px;
+}
+#text>ul{
+  width: 20px;
+  margin-left: 400px;
+}
+ul>a{
+  width: 20px;
+  height: 40px;
+
+  position: relative;
+  line-height: 30px;
+
+}
+.ul1{
+  /*margin-top: -500px;*/
+
+}
+.ul2{
+  /*margin-top: -420px;*/
+}
+.ul3{
+  margin-top: 80px;
+  position: relative;
+  line-height: 40px;
+}
+p{
+  text-align: left;
+   margin-left: 470px;
+
+}
+span{
+   padding-left: 10px;
+  border-left: 1px solid;
+}
+.p1{
+
+  margin-top:-315px;
+   line-height: 30px;
+
+}
+
+.p2{
+
+    margin-top: 22px;
+
+     line-height: 30px;
+
+}
+.location{
+  position: relative;
+  margin-left: 575px;
+  margin-top: -40px;
+}
+.p3{
+  margin-top: 50px;
+}
+span>img{
+  padding: 1px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.introduction{
+  margin-left: 100px;
+  margin-top: -30px;
+  position: absolute;
+}
+.introduction>h2{
+  /*margin-top: -50px;*/
+}
+.introduction>p{
+  width: 600px;
+  text-indent: 2em;
+  margin-left: 50px;
+  /*margin-top: -200px;*/
+}
+.zuozhe{
+  /*margin-top: -200px;*/
 }
