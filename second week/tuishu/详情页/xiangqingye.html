@@ -5,20 +5,25 @@
     <title>详情页</title>
   </head>
   <body>
+    <!-- 背景图片 -->
     <div class="bg">
       <img src="../../tuishu\主页\灰蒙层 拷贝.png" alt="">
     </div>
     <link rel="stylesheet" href="xiangqingye.css">
-
+    <!-- 用一个大的div包含整个内容 -->
     <div id="contain">
+      <!-- 关闭详情页的链接，并跳转到分类页面 -->
       <a href="../../tuishu\分类页\fenlei.html" class="close"><img src="close.png" alt="" ></a>
+    <!-- 左右的横线（与下面的class=“zuo”相同） -->
     <img src="组 2.png" alt="" class="you">
     <br>
-
+   <!-- 书的图片 -->
    <a href="#" class="shu"><img src="bookcover.png" alt="" ></a>
     <br>
+    <!-- 一个div包裹剩下的文字内容 -->
     <div id="text">
       <h1>书名</h1>
+      <!-- 用列表将小图标包裹及定位 -->
       <ul class="ul1">
       <a href="#"><img src="作者 .png" alt=""></a>
       <br>
@@ -34,6 +39,7 @@
         <br>
         <a href="#">  <img src="购买.png" alt="" ></a>
       </ul>
+      <!-- p包裹文字内容，用span进行css设置 -->
       <p class="p1">
       <span> 作者</span>
         <br>
@@ -62,6 +68,7 @@
       </p>
     </div>
     <br>
+    <!-- 作者简介等 -->
     <div class="introduction">
       <h2>作者简介</h2>
       <p>从前有座山，山里有座庙。从前有座山，山里有座庙。
@@ -74,7 +81,8 @@
 
     <br>
     <img src="组 1.png" alt="" class="zuo">
-
+      </div>
+<!-- 执行不成功的js -->
 <script type="text/javascript">
   // var arrUrl=['作者 .png','出.png','时间.png','图书馆.png','书 (1).png','购买.png'];
   // var oDiv=document.getElementById('text');
@@ -83,6 +91,6 @@
   //   oDiv.src+=arrUrl[i];
   // }
 </script>
-    </div>
+
   </body>
 </html>
